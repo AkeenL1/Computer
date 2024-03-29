@@ -160,8 +160,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "587a36534db125f3",
+  "active": "4fedd334cd1fb19b",
   "lastOpenFiles": [
+    "README.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Dataflow Through Databases.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Archival Storage.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Different values written at different times.md",
@@ -194,7 +195,6 @@
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Stars and Snowflakes- Schemas for Analytics.md",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Data Structures that power your database/B-Trees/B-Trees.md",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Data Structures that power your database/B-Trees/B-Tree Optimization.md",
-    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Aggregation - Data Cubes and Materialized Views.md",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Sort Order in Column Storage",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Column Compression",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Data Warehousing"
