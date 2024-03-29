@@ -1,0 +1,3 @@
+If you take snapshots of the databse from time to time, the data dump will typically be encoded using the latest schema, even if the original encoding in the source database contained a mixture of schema versions from different eras. Since you're copying the data anyway you mihgt as well encode the copy of the data consistently
+
+Since the data dump is written in one go and is immutable afterwards, formats like Avro container files that store the data in a single file w/ the schema at the top are a good fit.

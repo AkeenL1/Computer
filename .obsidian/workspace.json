@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Schema evolution rules.md",
+                "file": "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Archival Storage.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Schema evolution rules.md",
+                "file": "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Archival Storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Schema evolution rules.md",
+                "file": "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Archival Storage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Schema evolution rules.md"
+                "file": "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Archival Storage.md"
               }
             }
           }
@@ -160,8 +160,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4fedd334cd1fb19b",
+  "active": "587a36534db125f3",
   "lastOpenFiles": [
+    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Dataflow Through Databases.md",
+    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Archival Storage.md",
+    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases/Different values written at different times.md",
+    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Modes of Dataflow.md",
+    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow/Dataflow Through Databases",
+    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Encoding and Evolution.md",
+    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Schema evolution rules.md",
+    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Modes of Dataflow",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/The writer's schema and the reader's schema.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Avro.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/The merits of schemas.md",
@@ -170,9 +178,7 @@
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Code generation and dynamically typed languages.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Dynamically generated schemas.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/But what is the writer's schema.md",
-    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro/Schema evolution rules.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Avro",
-    "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Encoding and Evolution.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Thrift and Protocol Buffers/Data Types and Schema Evolution.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Thrift and Protocol Buffers/Thrift and Protocol Buffers.md",
     "Distributed Systems/Foundation of Data Systems/Encoding and Evolution/Formats for encoding data/Thrift and Protocol Buffers/Field tags and schema evolution.md",
@@ -189,14 +195,8 @@
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Data Structures that power your database/B-Trees/B-Trees.md",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Data Structures that power your database/B-Trees/B-Tree Optimization.md",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Aggregation - Data Cubes and Materialized Views.md",
-    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Transactions Processing or Analytics?.md",
-    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Sort Order in Column Storage/Several Different sort orders.md",
-    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Sort Order in Column Storage/Sort Order in Column Storage.md",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Sort Order in Column Storage",
-    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Column Compression/Column Compression.md",
     "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Column Compression",
-    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Data Warehousing",
-    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics",
-    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Data Structures that power your database/Other Indexing Structures"
+    "Distributed Systems/Foundation of Data Systems/Storage and Retrieval/Transaction Processing or Analytics/Data Warehousing"
   ]
 }

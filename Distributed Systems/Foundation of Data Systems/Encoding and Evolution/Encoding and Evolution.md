@@ -5,3 +5,4 @@ When schema or the reading of schema changes, the application code must change, 
 In this chapter we look at different formats for encoding data and how they handle schema changes, we also discuss how those formats are used for data storage and in communications like rest apis and rpc systems, as well as message brokers. 
 
 [[Formats for encoding data]]
+[[Modes of Dataflow]]
