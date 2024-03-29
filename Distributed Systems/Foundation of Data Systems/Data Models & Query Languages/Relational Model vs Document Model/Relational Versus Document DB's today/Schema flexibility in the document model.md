@@ -1,0 +1,9 @@
+Schema is the enforced structure of data in the database. I.E. schema defines what fields and types data can contain. Document databases are generally referred to as schemaless, but not only is that not entirely true relational databases generally don't enforce a schema on JSON data models. Schemaless here means that arbitrary key-values can be written to a document and clients don't have a guarantee of what will be on the document
+
+Document databases aren't entirely schemaless b/c the client still makes an assumption on the schema *on read*. A more accurate term is *schema-on-read* as opposed to a relational database that enforces a schema could be referred to as *schema-on-write*. These are similar to dynamic vs static type checking respectively and have their own positives and negatives.
+
+The difference in approach is noticeable in how changes to the format of data, in a document database your application code could handle the change and handle cases where it reads from an old document. In a relational database a migration is needed. Depending on what SQL you're using this can be slow and running UPDATE can be slow as well
+
+The schema-on-read approach is also good if the data doesn't have a consistent structure this could happen where you store many different types or objects, or the data you receive has a structure that is constantly changing outside of your control.
+
+All that to say in certain situation having a defined *schema-on-write* approach is not always the best and a *schema-on-read* approach could be better especially in cases where flexibility and a need for change are required. However if the data is more defined, schemas are extremely useful for enforcing structure

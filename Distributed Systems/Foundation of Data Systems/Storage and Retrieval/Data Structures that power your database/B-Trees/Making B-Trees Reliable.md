@@ -1,0 +1,5 @@
+One issue with a B-Tree is writes are update in place, we assume the update does not change the location of the page itself, but this is different from LSM-Trees that only append. 
+
+Overwriting can be thought of in terms of hardware, I.E. the spinning pointer going to a certain part of the disk and rewriting the sector with new data. Another issue is if several different pages get overwritten at the same time ( as in the case of splitting a page), if the database crashes during updates then data could be corrupted. To avoid this we can use a Write Ahead Log, which writes every transformation applied on the B-Tree before it applied. This way we can recover the B-Tree in event of a crash. 
+
+We also need to make sure concurrency is controlled. This is usually done using latches (lightweight locks), log structured approaches are simpler in this way as they can do merges without interfering with incoming queries and automatically swap segments when ready.

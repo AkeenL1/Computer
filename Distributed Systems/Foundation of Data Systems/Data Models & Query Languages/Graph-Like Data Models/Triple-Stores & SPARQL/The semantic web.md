@@ -1,0 +1,5 @@
+One are where the triple store model is used is in the creation of the semantic web, using the RDF model.
+
+The semantic web is the idea that since websites already publish text and pictures for humans, we could publish the same information in a machine-readable format for computers. [[The RDF data model]] (Resource description framework) was developed as a mechanism to enable this allowing for websites to be combined and have a *web of data*. Meaning in addition to human readable text, websites would publish their data as machine-readable formats, and when a change was made the data could automatically be updated across the web.
+
+While the semantic web ( at least in 2024 ) has yet to explode in popularity, the triple-store model that the semantic web utilizes ( using the RDF model ) is still useful for specific applications.

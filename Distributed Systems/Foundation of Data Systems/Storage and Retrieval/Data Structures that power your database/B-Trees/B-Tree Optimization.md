@@ -1,0 +1,6 @@
+There are a few notable optimizations that one can apply to B-Trees
+1. Instead of overwriting pages and maintaining a WAL in case of a crash, you can use a copy-on-write scheme. Here we write our modified page to a different location and a new version of the parent page is created pointing to that location. 
+2. We can save space on each page by storing the abbreviated versions of keys, as long as there's enough information on a key to act as a boundary between ranges this is fine. 
+3. Pages can be positioned anywhere on disk not necessarily next to each other, if a query needs to scan over a large amount of pages in sorted order, the disk seek may take a long time so most B-Tree implementations try to keep the pages on next to each other sequentially on disk. This is difficult to maintain as the tree grows however, in comparison to LSM-Trees that rewrite large segments during merging allowing them to more easily keep the segments sequential on disk
+4. Additional pointers can be added to tree, I.E. pointers on on child node pointing to its siblings
+5. B-Tree variants borrow some ideas from log-structured trees to reduce disk seeks.

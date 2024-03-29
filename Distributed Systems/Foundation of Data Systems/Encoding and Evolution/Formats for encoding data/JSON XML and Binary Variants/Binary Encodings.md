@@ -1,0 +1,3 @@
+For data that is used internally, we can be a bit more flexible with our data encoding format. JSON is less verbose than XML but both use quite a bit of space compared to binary formats, as such there are plenty of binary encodings for JSON and XML. Some formats extend the amount of data types, but generally they keep JSON and XML the same and don't prescribe a schema so they need to include all object field names in the encoded data. 
+
+Usually this is done by encoding meta data before the actual data such as length of the string and/or the type of object before encoding the whole string in binary. These binary encodings can vary and length and the most simplistic one will only give you a slightly smaller files, but we can decrease the size drastically. 

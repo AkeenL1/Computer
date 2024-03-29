@@ -1,0 +1,3 @@
+The algorithm (I.E. a storage engine that utilizes merging & compacting sorted files ) described in constructing & maintaining SSTables is effectively what makes a Log Structured Merge Tree ( LSM-Tree).
+
+This idea is also used in other engines, such as the indexing engine used in ElasticSearch a full-text search engine. These are generally implemented with a key-value sorted table where the key is the word thats being looked for and the value is the references to the documents containing that term. These mappings are kept in SSTable-like sorted files that are merged in the background. 

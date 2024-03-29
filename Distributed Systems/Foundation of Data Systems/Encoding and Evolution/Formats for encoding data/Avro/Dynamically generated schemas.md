@@ -1,0 +1,5 @@
+One advantage of Avro's quirk of not having a schema that contains tag numbers is that it is much friendlier to dynamically generated schemas. If you use Avro with say a relational DB, it's much easier to generate an Avro schema from the relational schema and encode the database contents using the schema, dumping all of it to an Avro object container file.
+
+If the database schema ever changes you can generate a new Avro schema from the database schema and export the data in the new avro schema. Since the fields are identified by name, the updated writer's schema can still be matched up with the old readers schema. 
+
+By contrast if you're using Thrift or Protocol Buffers the field tags would need to be assigned by hand everytime the schema changes. This dynamic schema generation wasn't a design goal of thrift or protocol buffers but was in Avro

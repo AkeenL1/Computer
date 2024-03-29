@@ -1,0 +1,7 @@
+As seen previously we can *write* graph data as into a relational structure, meaning we can also query graph data using this relational structure. The main difference is that in traditional relational data the joins you need are already known in advance. I.E. if you wanted to find all of the people living in a state in the US from relational data, you'd select the names of the people from joining together the peoples table with the state table. The important thing to not here is we know the relations in advanced. 
+
+Graph data is more flexible, any node can point to any other type of node. So one person node may point to a street which eventually points to the USA while another node may point to a region. As seen in the cypher language there is specific syntax for traversing 0 to N edges based on some condition ( like the edges label ). SQL provides a roundabout way of doing something similar using *recursive common table expressions*
+
+To query graph based data using SQL you'd use recursive common table expressions to effectively make sets based on some condition. So you could create a in_usa set using an SQL query that finds all the vertices that eventually go to the USA. You could then join on these specific sets to find the data that you want (I.E. create born_in_usa set and a lives_in_europe set and join the two).
+
+While this *works* it takes a bit more work and some added complexity, mainly because the relational model is not well suited for this sort if data relationship.

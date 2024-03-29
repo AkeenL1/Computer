@@ -1,0 +1,7 @@
+The main issue with SSTables is how do you get and keep it sorted if writes can happen in any order. To do this we would use some sorted tree algorithm such as red-black tree in memory. 
+- When a write comes in add it to the balanced in memory tree ( this is also known as a ***memtable***)
+- When the memtable gets bigger than some threshold write it to an SSTable and save it to disk. This can be done efficiently because the memtable already maintains the key-value pairs sorted by key. This new SSTable is the new segment, while its being written to writes can continue to a new memtable instance.
+- To perform reads we try to find the key in the memtable first, then in the data segments going from newest to oldest. 
+- At certain times we run a merge and compaction process to combine segments
+
+The only issue with this scheme is if the database crashes the memtable is lost and so are the most recent writes. To fix this we create a seperate log on disk that is simply and append only file that also gets written to. This log doesn't need to be in sorted order as it only needs to hold all the most recent writes so we can restore the memtable. Once a memtable is written to an SSTable it's corresponding log can be discarded. 

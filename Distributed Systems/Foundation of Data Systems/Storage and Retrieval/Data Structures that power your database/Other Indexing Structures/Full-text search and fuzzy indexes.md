@@ -1,0 +1,5 @@
+Indexing on *particular* (or a range of keys) key is not the only way to efficiently find some data. There are also indexing strategies for finding *similar* keys such as misspelled words, this is known as *fuzzy* querying and has different techniques. 
+
+A full-text search engine allows a search for one word to be expanded to include synonyms or other linguistic features of other words (such as spelling differences), as a practical example the database Lucene uses an SSTable-like index for its term dictionary, this dictionary has an in-memory index telling us the location of the data we're looking for. 
+
+In other DB's like LevelDB, the in-memory index is a sparse collection of keys, however in Lucene it's a *finite state automaton* - which represents the different states of character sequences (words) in the indexed text -  which can be transformed into a levenshtein automaton supporting efficient search for words within a given edit distance.

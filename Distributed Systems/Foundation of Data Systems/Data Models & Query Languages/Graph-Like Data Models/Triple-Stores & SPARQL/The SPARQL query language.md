@@ -1,0 +1,3 @@
+The SPARQL language ( pronounced sparkle ) is a query language for triple stores that predates the cypher query language for property graphs. They are actually quite similar to each other.
+
+Unlike the cypher language ( and really b/c unlike property graphs the triple store model and the RDF) don't distinguish between properties and edges ( a predicate represents either a property or an edge ) in SPARQL you can use the same syntax for both

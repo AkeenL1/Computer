@@ -1,0 +1,3 @@
+The data model of a data warehouse is relational often, just like OLTP databases. This is because SQL is a good fit for the queries and there are many graphical tools that allow analysts to generate an SQL Query and visualize the results. However it's the *internals* of the systems that are different as both are optimized for different queries
+
+There are a few that combine both under one facade, but still the internals are more and more different from each other, some database vendors specifically target businesses who need only data warehouses.

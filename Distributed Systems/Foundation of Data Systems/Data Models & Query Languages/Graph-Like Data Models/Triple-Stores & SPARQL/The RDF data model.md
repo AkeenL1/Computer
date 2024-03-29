@@ -1,0 +1,5 @@
+The turtle language we used previously is human readable format for RDF ( Resource description framework ) data. There are other options to write RDF data in such as XML, but turtle is less verbose and there are tools that exist to convert one RDF format into another. 
+
+The main idea is you can use the RDF ( which in turn specifies ways of using the triple-store model in specific data formats ) to create connections between websites. I.E. the subject, predicate, object format of triple stores can be used to connect data together using URIs. So we could have a subject URI for a facebook account and an object URI for a linkedin account and connect the two with a predicate URI that simply notes that the two are linked.
+
+It's important to note that these are URI's ***not*** URLs, I.E. they don't need to resolve anything, in the example above our predicate could look like `example.com/predicates/hasLinkedInProfile` and even if this didn't resolve to anything we can still understand the connection (edge). This way if the connection on the other end has a different way of labeling edges, there's no conflicts.

@@ -1,0 +1,11 @@
+The data structures discussed in this section or some of the best ways of handling limited operability & maintainability of disks, I.E. to have good performance on reads and writes on disk you need to lay out data very carefully. However this is tolerated because the *reliability* of disks if very good and their cheaper to use than RAM.
+
+As RAM becomes cheaper the cost becomes less of a concern & it becomes possible in smaller dataset to store everything in-memory, distributed across machines. Databases that utilize this technique are called in-memory databases and have many different implementations & use cases. Some are intended for caching, only indexing data that its acceptable to lose if something goes down, others are designed for durability using specialized hardware or utilizing the disk in some way as a backup.
+These are provided in different ways depeding on the DB, for instance Redis and Couchbase provide weak durability by writing to disk asynchronously.
+
+The performance advantage for in-memory datastores *isn't* that they don't need to read from disk, this is generally low cost as the operating system will cache the disk blocks, rather they can be faster because they avoid the overhead of encoding in-memory data structured into a form that can be written to disk.
+
+Besides this performance different DB's can provide access to datastructures that are difficult to store on disk, redis for instance provides a database-like interface for queues & sets.
+
+It is possible to use an in-memory database on datasets that are larger than available memory w/o using a disk-centric architecture. This is called *anti-caching* and the idea is to remove the least recently used data from memory and load it back when needed.
+This is similsr to what opersting systems do w/ virtual memory and swap files, but db's can manage each file individually while operating systems need to handle blocks at a time. This approach still requires the index fit in memory ( I.E. all the keys need to fit in memory )

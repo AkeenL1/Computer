@@ -1,0 +1,11 @@
+MapReduce is a programming model ( really a sort of technique. ) of performing read-only queries on databases across many documents across many machines. 
+
+Generally speaking a processing framework calls snippets of code possessing the ability to ***map*** ( similar to collect in functional programming ) data then ***reduce*** that data ( similar to fold or inject in functional programming ). Pretty much the map collects data based on some case  and reduce is takes the collection and turns it into data the end user wants. 
+
+In SQL you can do this by doing a `WHERE` and `GROUP BY` with whatever data you want in your `SELECT` statement. NoSQL DB's also allow for MapReduce querying by implementation specific to the DB. For instance MongoDB has a specific feature called `mapReduce` allowing for the same functionality.
+
+Map and Reduce functions are restricted, they must be pure functions (I.E. they cannot use any data **not** given to them, so no additional DB calls) and must not have any side effects. This way the DB can run them in any way at any time in any order even on failures. 
+
+MapReduce is a low-level ( low abstraction ) way of querying for data across multiple machines, many SQL db's have ways of implementing MapReduce but many distributed versions don't. Nothing about SQL contains it to running on  a single machine & MapReduce is not the only way to run distributed queries. Being able to run JavaScript code in the middle of a query is also a nice addition, but is also not specific to just MapReduce. Some SQL languages can perform a similar function.
+
+The main issue w/ MapReduce is you need to have two carefully constructed functions that coordinate with each other, instead of just one well written query. Also due to the way MapReduce functions are written, we move **away** from the a more declarative style of querying meaning there is no way to utilize a query optimizer. Certain DB's such as MongoDB have added in support for declarative MapReduce functions w/ certain flavors of syntax. But this in turn somewhat recreates the wheel of SQL just in a different form w/ a different syntax

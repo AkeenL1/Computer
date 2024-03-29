@@ -1,0 +1,10 @@
+While relational SQL databases are useful for many things, they struggle with ***impedance mismatch**** between the data models & application code. Impedance mismatch is the disconnect between application code and the relational database model of tables rows and columns, this arises due to the object oriented nature of most applications and the relational structure of relational db's
+
+ORM ( Object relation mapping ) frameworks like ruby on rails Active Record attempt to ease the transition a bit but the difference cannot be completely fixed.
+
+The ways of handling this transition is dependent on the structure of your data, and changing the structure may lead to a reduction in impedance mismatch. I.E. if you have a data model that consists of a *one-to-many relationship* there are a few options.
+1. Originally SQL traditionally would have the user put all of the information in other tables with the primary key of what you're looking for as the foreign key (I.E a users table with a primary key and a position table ,education table etc., all with foreign keys pointing to the a specific user)
+2. Later versions of SQL allowed users to store structured data types and even XML in rows, adding support for querying and indexing those rows
+3. A third option is to change the data model entirely, b/c it is one to many we can encode all of the information belonging to the primary entity in a json document. This provides an easy way to store and access data, but efficient queries are more difficult since we usually can't query for values inside the JSON.
+
+The JSON model can lead to a reduction of the impedance mismatch between the data layer and application code, however there are problems w/ it that will be discussed later. The lack of a schema is considered the largest advantage in using a JSON document model as well as better *locality* than a multi-table schema one would use in traditional SQL. This is because all the relevant information is in one document, instead of needing to perform complex queries or multiple joins.

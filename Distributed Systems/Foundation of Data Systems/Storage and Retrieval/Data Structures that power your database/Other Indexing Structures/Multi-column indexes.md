@@ -1,0 +1,7 @@
+The indexes discussed thus far only map to a single value (i.e `documentId: red` for an index on color), this isn't sufficient if we want to do queries on multiple indexes. The most common multi-columned index is called a concatenated index, which simply combines several fields into one key by appending one column to another.
+
+This is similar to a phone book containing `(lastname, firstname): phoneNumber` It's you can do searches by lastname or by lastnamefirstname, but you can't do searches on just the firstname. One solution to this issue is Multi-dimensional indexes, which allow for querying several columns at once. This is important for geospatial data particularly as someone might want to query for specific latitude and longitude at the same time.
+
+B-Trees & LSM-Trees can't efficiently answer that query, so theres the option of translating a two dimensional location into a single number using a space-filling curve. A more common approach is to use R-trees.
+
+Multi-dimensional indexes can be used for more than geospatial data. You could be a three dimensional index on 3 colors (I.E. red, green, blue )to find specific range of color. Or hold (date, temperature) to find the temps on a range of dates
