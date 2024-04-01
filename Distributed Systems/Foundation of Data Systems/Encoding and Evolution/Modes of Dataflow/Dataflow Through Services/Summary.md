@@ -1,0 +1,9 @@
+When processes communicate over a network, there are many different ways os arranging the communication, one of the most popular being client-server where one process acts as a client sending requests and another as a server receiving requests and sending responses. Servers can act as clients, the important thing to note is there many popular approaches to building out services. 
+
+Two common ones are REST and SOAP, REST is a design philosophy focused on simplicity, ease of use and documentation w/ simple standards, using HTTP features and sending data in the URI, while SOAP is a specific protocol that is HTTP agnostic, but can use HTTP, that uses XML and has alot more complex standards, REST Api's are generally more popular because of this simplicity.
+
+Both however are the latest incarnation of technologies for making API calls based on the idea of RPC's or remote procedure calls, the idea that we can make a request to a remote connection look the same as a local function call, there are quite a bit of reasons why this is flawed such as performance optimizations and error handling and trying to make a remote call look like your code is usually less effective than using something like REST and not hiding the fact its a network call.
+
+There have been evolutions to RPC's such as gRPC and Rest.li which have added support for different toolings things such as futures and streams, along with service discovery. Custom RPC protocols with binary encoding formats can achieve better performance than REST but RESTful API's has generally a better developer experience. 
+
+The forwards and backwards compatibility capabilities of RPC depends on the encoding schema's supported, but generally is more complex to maintain versioning compared to REST where the encoding schema version to use is usually in the header or in the url. 
